@@ -193,3 +193,18 @@ mAP = 93.29%      ||    All_score_threhold=0.5 : F1=0.89 ; All_Recall=89.76% ; A
 
 1. 支持 python > 3.7 的环境，pytorch >1.7.0，cuda>=11.0，cudnn 8.0.5。
 2. 特别说明：小组训练及测试在 python 3.11 环境下进行。
+
+<!-- links -->
+[your-project-path]:shaojintian/Best_README_template
+[contributors-shield]: https://img.shields.io/github/contributors/shaojintian/Best_README_template.svg?style=flat-square
+[contributors-url]: https://github.com/shaojintian/Best_README_template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/shaojintian/Best_README_template.svg?style=flat-square
+[forks-url]: https://github.com/shaojintian/Best_README_template/network/members
+[stars-shield]: https://img.shields.io/github/stars/shaojintian/Best_README_template.svg?style=flat-square
+[stars-url]: https://github.com/shaojintian/Best_README_template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg
+[license-shield]: https://img.shields.io/github/license/shaojintian/Best_README_template.svg?style=flat-square
+[license-url]: https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/shaojintian
