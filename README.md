@@ -14,7 +14,7 @@
 <br />
 
 <p align="center">
-  <a href="https://github.com/your_github_name/your_repository/">
+  <a href="https://github.com/Meta217/yolov7-fruit-detection/">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -22,14 +22,14 @@
   <p align="center">
     使用yolov7来进行水果识别！
     <br />
-    <a href="https://github.com/your_github_name/your_repository"><strong>探索本项目的文档 »</strong></a>
+    <a href="https://github.com/Meta217/yolov7-fruit-detection"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/your_github_name/your_repository">查看Demo</a>
+    <a href="https://github.com/Meta217/yolov7-fruit-detection">查看Demo</a>
     ·
-    <a href="https://github.com/your_github_name/your_repository/issues">报告Bug</a>
+    <a href="https://github.com/Meta217/yolov7-fruit-detection/issues">报告Bug</a>
     ·
-    <a href="https://github.com/your_github_name/your_repository/issues">提出新特性</a>
+    <a href="https://github.com/Meta217/yolov7-fruit-detection/issues">提出新特性</a>
   </p>
 
 </p>
@@ -63,7 +63,7 @@
 2. 克隆这个仓库
 
 ```sh
-git clone https://github.com/your_github_name/your_repository.git
+git clone https://github.com/Meta217/yolov7-fruit-detection.git
 ```
 
 ### 文件目录说明
@@ -87,9 +87,6 @@ filetree
 └── /util/
 ```
 
-### 开发的架构 
-
-请阅读[ARCHITECTURE.md](https://github.com/your_github_name/your_repository/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
 
 ### 部署
 
