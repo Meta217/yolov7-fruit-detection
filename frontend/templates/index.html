@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="mouse">
+        <img src="{{ url_for('static', filename='cursor.png') }}" alt="Custom Cursor">
+    </div>
+    <div class="container">
+        <h1>Fruit Detection</h1>
+        <div class="upload-section">
+            <input type="file" id="uploadInput">
+            <button onclick="uploadImage()">Upload and Detect</button>
+        </div>
+        <div class="image-section">
+            <div class="image-container">
+                <h2>Uploaded Image</h2>
+                <div class="image-background">
+                    <img id="uploadedImage" src="" alt="Uploaded Image">
+                </div>
+            </div>
+            <div class="image-container">
+                <h2>Detected Image</h2>
+                <div class="image-background">
+                    <img id="outputImage" src="" alt="Output Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
