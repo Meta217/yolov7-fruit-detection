@@ -39,28 +39,19 @@
 ## 目录
 
 - [上手指南](#上手指南)
-  - [开发前的配置要求](#开发前的配置要求)
   - [安装步骤](#安装步骤)
 - [文件目录说明](#文件目录说明)
 - [开发的架构](#开发的架构)
 - [部署](#部署)
 - [使用到的框架](#使用到的框架)
-- [贡献者](#贡献者)
-  - [如何参与开源项目](#如何参与开源项目)
 - [版本控制](#版本控制)
 - [作者](#作者)
 - [鸣谢](#鸣谢)
 
 
-###### 开发前的配置要求
-
-1. xxxxx x.x.x
-2. xxxxx x.x.x
-
 ###### 安装步骤
 
-1. 获取一个免费的API Key于 [https://example.com](https://example.com)
-2. 克隆这个仓库
+1. 克隆这个仓库
 
 ```sh
 git clone https://github.com/Meta217/yolov7-fruit-detection.git
@@ -69,22 +60,43 @@ git clone https://github.com/Meta217/yolov7-fruit-detection.git
 ### 文件目录说明
 
 ```
-filetree 
-├── ARCHITECTURE.md
-├── LICENSE.txt
-├── README.md
-├── /account/
-├── /bbs/
-├── /docs/
-│   ├── /rules/
-│   │   ├── backend.txt
-│   │   └── frontend.txt
-├── manage.py
-├── /oa/
-├── /static/
-├── /templates/
-├── useless.md
-└── /util/
+yolov7-fruit-detection/
+│
+├── label_data/                 # 用于存放自己标注的数据
+│
+│
+├── logs/                 # 存放由我们小组训练好的权重文件（270mb左右）
+│
+│
+├── utils/                # 存放模型加载、绘图以及测试数据的相关代码
+│
+├── test/                  # 用于存放用来测试的数据
+│
+├── img/                 # 用户上传的图片存储目录
+│
+├── output/                 # 处理后的图片输出目录
+│
+├── frontend/                 # 前端代码文件
+│   ├── static/                 # 静态文件目录 (CSS, JS, 图片)
+│   │   ├── style.css           # 前端样式文件
+│   │   ├── script.js           # 前端脚本文件
+│   │   ├── background.jpg      # 背景图片文件
+│   │   ├── cursor.png          # 自定义鼠标光标图片
+│   │
+│   ├── templates/              # 模板文件目录 (HTML)
+│       ├── index.html          # 前端页面入口
+│
+├── detection.py                # 图像识别脚本
+│
+├── app.py                  # Flask应用主文件
+│
+├── predict.py             # 用于测试数据     
+│
+├── train.py                  
+│
+├── yolo.py                                 
+│
+└── ...                     # 其他项目相关文件
 ```
 
 
