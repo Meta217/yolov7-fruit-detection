@@ -38,24 +38,17 @@
 
 ## 目录
 
-- [上手指南](#上手指南)
-  - [安装步骤](#安装步骤)
-- [文件目录说明](#文件目录说明)
-- [开发的架构](#开发的架构)
-- [部署](#部署)
-- [使用到的框架](#使用到的框架)
-- [版本控制](#版本控制)
-- [作者](#作者)
-- [鸣谢](#鸣谢)
-
-
-###### 安装步骤
-
-1. 克隆这个仓库
-
-```sh
-git clone https://github.com/Meta217/yolov7-fruit-detection.git
-```
+- [yolov7-fruit-detection](#yolov7-fruit-detection)
+  - [目录](#目录)
+    - [文件目录说明](#文件目录说明)
+    - [环境说明](#环境说明)
+    - [部署](#部署)
+    - [运行说明](#运行说明)
+    - [前端运行说明](#前端运行说明)
+      - [结构](#结构)
+      - [文件说明](#文件说明)
+      - [界面介绍](#界面介绍)
+      - [后端运行](#后端运行)
 
 ### 文件目录说明
 
@@ -72,9 +65,9 @@ yolov7-fruit-detection/
 │
 ├── test/                  # 用于存放用来测试的数据
 │
-├── img/                 # 用户上传的图片存储目录
+├── img/                 # 可以存放供前端测试的任意图片
 │
-├── output/                 # 处理后的图片输出目录
+├── output/                 # 存放在前端识别后的图片
 │
 ├── frontend/                 # 前端代码文件
 │   ├── static/                 # 静态文件目录 (CSS, JS, 图片)
@@ -92,49 +85,29 @@ yolov7-fruit-detection/
 │
 ├── predict.py             # 用于测试数据     
 │
-├── train.py                  
+├── train.py               # 用于训练模型    
 │
-├── yolo.py                                 
+├── yolo.py                # 涉及目标检测、数据测试的内容                 
 │
 └── ...                     # 其他项目相关文件
 ```
 
+### 环境说明
+
+1. 支持 python > 3.7 的环境，pytorch >1.7.0，cuda>=11.0，cudnn 8.0.5。
+2. 特别说明：小组训练及测试在 python 3.11 环境下进行。
 
 ### 部署
 
-### 使用到的框架
-
-- [xxxxxxx](https://getbootstrap.com)
-- [xxxxxxx](https://jquery.com)
-- [xxxxxxx](https://laravel.com)
-
-### 版本控制
-
-该项目使用Git进行版本管理。您可以在repository参看当前可用版本。
-
-### 文件说明
-
-```
-filetree 
-├── test/                  # 用于存放用来测试的数据
-├── label_data/            # 用于存放自己标注的数据
-├── 运行截图/              # 用于存放运行截图的信息
-├── img/                   # 可以存放供前端测试的任意图片
-├── output/                # 存放在前端识别后的图片
-├── predict.py             # 用于测试数据
-├── frontend/              # 存放前端的相关内容
-├── util/                  # 存放模型加载、绘图以及测试数据的相关代码
-├── nets/                  # 存放训练用的网络的相关内容
-├── yolo.py                # 涉及目标检测、数据测试的内容
-├── detection.py           # 由app.py调用的脚本，用于识别图片
-├── app.py                 # Flask应用的入口文件
-└── logs/                  # 存放由我们小组训练好的权重文件（270mb左右）
+```sh
+git clone https://github.com/Meta217/yolov7-fruit-detection.git
 ```
 
 ### 运行说明
-
-1. 直接运行 `predict.py`，终端窗口会输出 metric 的结果。
-2. 终端的输出格式为：
+1. 在yolo.py设置model_path(logs目录训练好的权重文件)和phi(yolov7的版本)
+2. 运行 `python predict.py`，终端窗口会输出 metric 的结果
+3. 运行 `python app.py`, 进行前端交互
+4. 终端的输出格式为：
 
 ```
 "Map = class AP || score_threhold= x : F1= x ; Recall= x ; Precision= x"
@@ -197,14 +170,10 @@ mAP = 93.29%      ||    All_score_threhold=0.5 : F1=0.89 ; All_Recall=89.76% ; A
 
 #### 后端运行
 
-- 在项目根目录中运行 `python app.py` 来启动Flask服务器；
+- 运行 `python app.py` 来启动Flask服务器；
 - 在浏览器中打开 `http://127.0.0.1:5000`，可以看到一个美观的前端界面，可以上传图片并显示结果。
 - 由用户上传的图片会保存到 `img` 文件夹中并进行重命名（`test_#.jpg`），识别后的图片会保存在 `output` 文件夹中，名字相同。
 
-### 环境说明
-
-1. 支持 python > 3.7 的环境，pytorch >1.7.0，cuda>=11.0，cudnn 8.0.5。
-2. 特别说明：小组训练及测试在 python 3.11 环境下进行。
 
 <!-- links -->
 [your-project-path]:Meta217/yolov7-fruit-detection
